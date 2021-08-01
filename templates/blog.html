@@ -1,0 +1,16 @@
+ {% extends "base.html" %}
+
+ {% block content %}
+ <h2> Practical Privacy </h2>
+ <p> I am {{ author }} John </p>
+ {% if sunny %}
+ <p>Today is a sunny day</p>
+ {% else %}
+ <p>Today is a rainy day</p>
+ {% endif %}
+
+ {% for post in posts %}
+    <h2> {{post.title}} </h2>
+    <h3> {{post.author}} </h3>
+ {% endfor %}
+ {% endblock %}
